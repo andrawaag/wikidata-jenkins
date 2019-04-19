@@ -1,8 +1,13 @@
+version: '3'
+
 services:
   jenkins:
-    image: jenkins/jenkins:lts
+    image: wikidata-jenkins:latest
     ports:
       - 8080:8080
       - 50000:50000
     volumes:
-      - genewiki-jenkins-home:/var/jenkins_home
+      - wikidata-jenkins-home:/var/jenkins_home
+
+volumes:
+  wikidata-jenkins-home:
